@@ -1,32 +1,28 @@
-import css from 'components/Profile/Profile.module.css';
-import user from 'json.files/user.json';
+import { UserInf, CurrentInf } from 'components/Profile/Profile.styled';
 import PropTypes from 'prop-types';
-export const Profile = ({users}) => {
-    return (
-      <div className={css.Profile}>
-        <div className="description">
-                <img src={user.avatar} alt="User avatar" className="avatar" />
-          <p className="name">{user.username}</p>
-          <p className="tag">{user.tag}</p>
-                <p className="location">{user.location}</p>
-        </div>
-
-        <ul className="stats">
-          <li>
-            <span className="label">Followers</span>
-            <span className="quantity">{user.stats.followers}</span>
-          </li>
-          <li>
-            <span className="label">Views</span>
-            <span className="quantity">{user.stats.views}</span>
-          </li>
-          <li>
-            <span className="label">Likes</span>
-            <span className="quantity">{user.stats.likes}</span>
-          </li>
-        </ul>
+export const Profile = ({ users }) => {
+  return (
+    <div >
+      <div>
+        <img src={users.avatar} alt="User avatar" />
+        <UserInf>{users.username}</UserInf>
+        <UserInf>{users.tag}</UserInf>
+        <UserInf>{users.location}</UserInf>
       </div>
-    );
+      <CurrentInf>
+        <li>
+          <span>Followers</span>
+          <span>{users.stats.followers}</span>
+        </li>
+        <li>
+          <span>Views</span>
+          <span>{users.stats.views}</span>
+        </li>
+        <li>
+          <span>Likes</span>
+          <span>{users.stats.likes}</span>
+        </li>
+      </CurrentInf>{' '}
+    </div>
+  );
 };
-
-

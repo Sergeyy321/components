@@ -8,7 +8,7 @@ const colorIsOnline = props => {
     return "red"
   }
 }
-export const spanEl = styled.span`
+export const SpanEl = styled.span`
   width: 20px;
   height: 20px;
   background-color: ${colorIsOnline};
@@ -16,17 +16,19 @@ export const spanEl = styled.span`
 `;
   
 export const FriendsCards = styled.ul`
-  background-color: #53ffa9;
   padding: 0;
-  margin: 0;
-  width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 15px;
+  display: flex;
+  width: 150px;
   list-style-type: none;
+  flex-direction: column-reverse;
 `;
 
 
 export const FriendsCard = styled.li`
   display: flex;
-  justify-content: center;
   align-items: center;
 `;
 

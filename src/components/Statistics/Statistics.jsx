@@ -1,21 +1,24 @@
-import css from 'components/Statistics/Statistics';
-import data from 'json.files/data.json';
+import {
+  Section,
+  Title,
+  UlItem,
+  ElStats,
+} from 'components/Statistics/Statistics.styled';
 import PropTypes from 'prop-types';
 
 export const Statistic = ({title, stats }) => {
    return (
-     <section className="statistics">
-           {data.title !== '' && ( <h2 className="title">Upload stats</h2>)
-     }
-       <ul className="stat-list">
-         {data.map(item => (
-          <li  key={item.id}>
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}</span>
-           </li>
+     <Section>
+       <Title>{title}</Title>
+       <UlItem>
+         {stats.map(item => (
+           <ElStats key={item.id}>
+             <span >{item.label}</span>
+             <span >{item.percentage}</span>
+           </ElStats>
          ))}
-       </ul>
-     </section>
+       </UlItem>
+     </Section>
    ); 
 
 
