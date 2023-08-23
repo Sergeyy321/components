@@ -1,4 +1,8 @@
-import { UserInf, CurrentInf } from 'components/Profile/Profile.styled';
+import {
+  UserInf,
+  CurrentInfBlock,
+  CurrentInf,
+} from 'components/Profile/Profile.styled';
 import PropTypes from 'prop-types';
 export const Profile = ({ users }) => {
   return (
@@ -9,20 +13,20 @@ export const Profile = ({ users }) => {
         <UserInf>{users.tag}</UserInf>
         <UserInf>{users.location}</UserInf>
       </div>
-      <CurrentInf>
-        <li>
+      <CurrentInfBlock>
+        <CurrentInf>
           <span>Followers</span>
           <span>{users.stats.followers}</span>
-        </li>
-        <li>
+        </CurrentInf>
+        <CurrentInf>
           <span>Views</span>
           <span>{users.stats.views}</span>
-        </li>
-        <li>
+        </CurrentInf>
+        <CurrentInf>
           <span>Likes</span>
           <span>{users.stats.likes}</span>
-        </li>
-      </CurrentInf>{' '}
+        </CurrentInf>
+      </CurrentInfBlock>{' '}
     </div>
   );
 };

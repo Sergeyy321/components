@@ -22,7 +22,7 @@ export const UlItem = styled.ul`
   align-items: center;
   justify-content: center;
   list-style-type: none;
-  background-color: #00ff4c;
+  background-color: #9cf8d8;
   height: 40px;
 `;
 
