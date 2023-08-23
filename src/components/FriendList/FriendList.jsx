@@ -19,4 +19,9 @@ export const FriendList = ({ friends }) => {
       ))}{' '}
     </FriendsCards>
   );
+
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.object),
 };

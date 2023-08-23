@@ -30,3 +30,6 @@ export const Profile = ({ users }) => {
     </div>
   );
 };
+Profile.propTypes = {
+  users: PropTypes.object,
+};
